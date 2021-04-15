@@ -1,0 +1,279 @@
+version: "2.0"
+
+nlu:
+- intent: restau_info
+  examples: |
+    - Where is it ?
+    - give me some information about your restaurant
+    - What's it's name ? Where is the restaurant ?
+    - What are the famous plates of this restaurant ?
+    - what is the speciality of this restaurant ?
+    - is there any mlewi restaurant here
+    - Do you have other branches in different places ?
+    - Where is the restaurant located ?
+    - What is the restaurant called ?
+    - What are you cooking today?
+    - where is your resutaurant?
+    - where is located the restaurant and what type of food it serves?
+    - where is the restaurant location ?
+    - where is the restaurant location?
+    - what does your restaurant serve
+    - What's your speciality food?
+    - Can you provide me more details about your restaurant ?
+- intent: delivery
+  examples: |
+    - Is the delivery possible ??
+    - Do u do delivery?
+    - can i order from home ?
+    - i dont have time to come and get it, do have a delivery service instead ?
+    - You do take outs ?
+    - Is it possible to have a delivery after midnight ?
+    - It is possible to make a delivery ?
+    - Is there a chance you can deliver to me at home?
+    - is delivery possible at night?
+    - delivery to house or not?
+    - there is a delivery ?
+    - do you deliver to Manzeh 9 ?
+    - do you deliver to Auckland ?
+    - Do you have delivery ?
+    - Do you have delivery service ?
+- intent: menu
+  examples: |
+    - Do you serve pizza?
+    - Do you serve vegetarian food?
+    - Do you serve alcohol?
+    - Do you serve alcohol?
+    - give me the menu please
+    - What about the menu ?
+    - The menu plz
+    - what is the menu of this restaurant?
+    - so, what we have here
+    - Any specials for today ?
+    - What is the restaurant's special dish ?
+    - Do you have a special family offer ?
+    - Can i have the menu please
+    - what is your best dish?
+    - please can i make a check on the menu?
+    - Can I have the menu?
+    - Can I have the wine list?
+    - what can i a eat ?
+    - what is the most popular dish here ?
+    - what's todays' special in the menu
+    - Can you show me the menu?
+    - Cani ask you something about the menu please?
+    - Can I see the menu please ?
+- intent: timing
+  examples: |
+    - what's the OPEN HOURS ??
+    - When your services start ?
+    - What are your open hours
+    - when does the restaurant open and close?
+    - could i come whenever i want or you have specific open hours, if yes what are they
+    - Until when the restaurant is open ?
+    - Is the restaurant open during national holidays ?
+    - What time do you open
+    - In what time do you open?
+    - when are you open?
+    - when the restaurant opens?
+    - When does the restaurant close?
+    - when does the restaurent opens
+    - what are the open hours on weekends
+    - When does the restaurant Work ?
+    - At what time do your restaurant close?
+    - What's your work Time
+- intent: reservation
+  examples: |
+    - I need a [table next to the window and for 3 people](reservation)
+    - I would like to make [reservation for 2 people](reservation)
+    - I want [a table for two with a view on the sea](reservation)
+    - i want to reserve [a table for 2](reservation)
+    - i want to reserve [a big table in a nice area please](reservation)
+    - I wanna make a [reservation for 3 peoples next the the door or on open air space if possible](reservation) ?
+    - I'd like to make a [reservation for four people , a table preferably next to the window](reservation)
+    - I want to make a [reservation for five persons](reservation)
+    - I want to make a [reservation for a couple of guys](reservation)
+    - I want to sit [besides the window](reservation)
+    - A [reservation for 1 person ,table next to window](reservation)
+    - Can I book [a table for 4 people, at 7pm](reservation)?
+    - Can I reserve [a table](reservation)?
+    - Can I take a [nice place](reservation)?
+    - have you a [nice place](reservation)?
+    - i'd like a [table for 2 people at 6 pm please](reservation)
+    - [table for 4 persons next the window](reservation) for a bisness meeting
+    - I would like to book [a table](reservation)
+    - Can you please choose [the best view on my table](reservation)?
+    - I want to make a [reservation for the next saturday](reservation)
+    - Book a [table for two people](reservation)
+    - Book a [table for 2 people](reservation)
+    - [table for 10 persons](reservation)
+    - [table for six](reservation)
+    - [place for six](reservation)
+    - [table near the pool side](reservation)
+    - [table for four with an child seating](reservation)
+    - [place for a couple](reservation)
+    - [couple](reservation)
+    - [table with high chairs](reservation)
+    - [table in the corner](reservation)
+    - [table with a booth](reservation)
+- intent: giving_code
+  examples: |
+    -this is my code [451228](code)
+    -my code is [545](code)
+    -the code is [487](code)
+    -it's [8787](code)
+    -code [5678](code)
+    -[5786](code)
+    -take it , [8786](code)
+    -it is [45](code)
+    -wait a minute , [7875](code)
+    -it's was [5788](code)
+- intent: order_food
+  examples: |
+    - Can we have [the Sunday roast with vegetables and Chicken salad](command) please?
+    - Can i have [2 glasses of white wine](command)
+    - I want a [pizza neptune](command)
+    - give me a [small cola and a sandwich](command)
+    - Can i have [pizza Marguerite L and cola](command) please
+    - I want a [chicken burger with extra cheese](command)
+    - i want [my burger with extra cheese](command) and [2 glasses of white wine](command)
+    - I would like [an iced coffee](command), please.
+    - give me [extra hrissa and without onion](command) please
+    - I want to have [2 large pizzas with extra cheese](command)
+    - I want [big pizza with some water](command)
+    - I would like a [dish for two people and one dessert](command)
+    - give me [5 hamburgers with extra cheese and soft drink](command)
+    - I want [two pizza with extra cheese and a water ](command)
+    - [pizza](command)
+    - and a [big pizza](command)
+    - [sandwich](command)
+    - I would like to have[pizza](command)
+    - give me [cola](command)
+    - [soft drink](command)
+    - a [pizza chicken, fries and a coca ](command)
+    - order [food](command)
+    - i want [double cheese berger without onion and mustard](command)
+    - i want to order a [pine apple pizza without the pineapples](command)
+    - [Without onion](command)
+    - I'd like to get [........](command)
+    - Can I get a [small pizza](command) ?
+- intent: modify_order
+  examples: |
+    - I want to [change the pizza to a sandwich](modification)
+    - I have already ordred and i changed my mind , [not pizza Marguerite but i would have an xl one](modification)
+    - [Without tomatos](modification) plz
+    - [remove the pickles from my burger](modification) please
+    - i wanna [change the sandwich with a pizza](modification)
+    - I wanna [change my order from sandwich to complet dish](modification)
+    - I would like to modify an order I passed two hours ago
+    - I ordered 5 hamburgers, i [want also a pizza](modification)
+    - I want to modifie my order please
+    - [change a humberger to ice cream](modification)
+    - [add a humberger the ice cream](modification)
+    - [change the small fries with bigger ones](modification)
+    - i want to [add some fries and some chicken nuggets](modification)
+    - Can i [change the dining option](modification)?
+    - I want to [add a cola](modification) to the order
+    - i want to [change the fries with some chicken nuggets](modification)
+    - modifie
+    - [remove the cola](modification) from the order please
+    - i want to [remove the cola](modification)
+    - modify the order
+    - add
+    - change
+    - remove
+    - without
+
+- intent: cancel_order
+  examples: |
+    - I want to cancel my order
+    - I want to delete my order
+    - Sorry i would like to cancel the last order
+    - Sorry but can you cancel my order
+    - i want to cancel my order
+    - ah sorry guys, i changed my opinion i want to cancel the order
+    - Can i cancle my order ?
+    - I don't want to take from you that order anymore
+    - I dont need any more food
+    - sorry! i want to cancel my order please
+    - cancel my previous order please
+    - Please cancel my order
+    - Sorry, i have an urgent thing to do.. I have to go
+- intent: bill
+  examples: |
+    - give me the check please
+    - The bill plz
+    - money
+    - the addition
+    - how much does it cost?
+    - how much ?
+    - how much money?
+    - Checkout please
+    - I would like to pay
+    - Can i have the bill ?
+    - How much does it cost?
+    - how much does it cost??
+    - how much it costs?
+    - Can I have the bill please?
+    - can i a pay with credit card ?
+    - how much this will cost me
+    - how much this will cost me, can i have the bill please?
+    - How much it costs ?
+    - May i have the vill please?
+    - Can I get the bill please
+    - Do you accept credit cards
+    - could we get the bill
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+
+- intent: affirm
+  examples: |
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+
+- intent: deny
+  examples: |
+    - no
+    - n
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
