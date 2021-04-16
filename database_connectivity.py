@@ -10,8 +10,6 @@ def ComResAjout(command,reservation):
     sql2='INSERT INTO CLIENTS(command,reservation) VALUES ("{0}","{1}");'.format(command,reservation)
     mycursor.execute(sql2)
     mydb.commit()
-
-
     print(mycursor.rowcount,"record inserted.")
     return mycursor.lastrowid
 
@@ -40,6 +38,19 @@ def cancel(code):
     mycursor.execute(sql)
     mydb.commit()
     return
+
+def bill(code):
+    mydb=mysql.connector.connect(
+        host="localhost",
+        user="oussama",
+        password="michiamoOUSSAMA",
+        database="rasadatabase",auth_plugin='mysql_native_password'
+    )
+    mycursor=mydb.cursor()
+    sql='select Price from CLIENTS WHERE id="{0}"'.format(code)
+    mycursor.execute(sql)
+    myresult = mycursor.fetchall()
+    return myresult[0][0]
 
 if __name__== "__main__":
     ComResAjout("example","example")

@@ -116,15 +116,13 @@ responses:
        6:00 L'après-midi - 12:00 Le matin 
        
   utter_reservation:
-  - text: reservation done
+  - text: Done !
   utter_command:
-  - text: command done
+  - text: Done !
   utter_modify_order:
   - text: Done !
   utter_cancel_order:
   - text: Done !
-  utter_bill:
-  - text: this is your bill
   utter_submit:
   - text: all done
   utter_for_help:
@@ -149,9 +147,12 @@ actions:
 - cancel_form
 - modification_form
 - reservation_command_form
+- bill_form
 forms:
   reservation_form: {}
   command_form: {}
   cancel_form: {}
   modification_form: {}
+  bill_form: {}
+
 e2e_actions: []

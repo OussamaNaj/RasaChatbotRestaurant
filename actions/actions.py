@@ -4,7 +4,7 @@ from rasa_sdk import Action, Tracker
 from rasa_sdk.executor import CollectingDispatcher
 from database_connectivity import ComResAjout
 from database_connectivity import modification
-from database_connectivity import cancel
+from database_connectivity import cancel,bill
 
 # import transformers
 # import torch
@@ -49,7 +49,7 @@ class ActionHelloWorld1(FormAction):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
         id = ComResAjout("nothing", tracker.get_slot("reservation"))
-        dispatcher.utter_message(text="your Code is: "+str(id[0][0]))
+        dispatcher.utter_message(text="your Code is: "+str(id))
 
         return []
 class ActionHelloWorld2(FormAction):
@@ -64,7 +64,7 @@ class ActionHelloWorld2(FormAction):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
         id = ComResAjout(tracker.get_slot("command"), "nothing")
-        dispatcher.utter_message(text="Your Code is: "+ str(id[0][0]))
+        dispatcher.utter_message(text="Your Code is: "+ str(id))
 
         return []
 class ActionHelloWorld3(FormAction):
@@ -112,4 +112,20 @@ class ActionHelloWorld5(FormAction):
         dispatcher.utter_message(text="")
         modification(tracker.get_slot("modification"),tracker.get_slot("code"))
 
+        return []
+
+class ActionHelloWorld6(FormAction):
+
+    def name(self) -> Text:
+        return "bill_form"
+    @staticmethod
+    def required_slots(tracker:Tracker)->List[Text]:
+        print("required_slots(tracker:Tracker)")
+        return ["code"]
+    def submit(self, dispatcher: CollectingDispatcher,
+            tracker: Tracker,
+            domain: Dict[Text, Any]) -> List[Dict]:
+
+        res=bill(tracker.get_slot("code"))
+        dispatcher.utter_message(text="Your Bill is : " + str(res)+"$")
         return []

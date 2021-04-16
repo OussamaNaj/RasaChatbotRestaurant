@@ -106,7 +106,9 @@ stories:
 - story: path9
   steps:
   - intent: bill
-  - action: utter_bill
+  - action: utter_code
+  - intent: giving_code
+  - action: bill_form
 
 - story: path10
   steps:
