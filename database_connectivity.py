@@ -20,6 +20,7 @@ def modification(modification,code):
         password="michiamoOUSSAMA",
         database="rasadatabase",auth_plugin='mysql_native_password'
     )
+
     mycursor=mydb.cursor()
     sql='UPDATE CLIENTS SET  modification= "{0}" WHERE id="{1}"'.format(modification,code)
     mycursor.execute(sql)
@@ -51,6 +52,21 @@ def bill(code):
     mycursor.execute(sql)
     myresult = mycursor.fetchall()
     return myresult[0][0]
+
+def verif(code):
+        mydb = mysql.connector.connect(
+            host="localhost",
+            user="oussama",
+            password="michiamoOUSSAMA",
+            database="rasadatabase", auth_plugin='mysql_native_password'
+        )
+        mycursor = mydb.cursor()
+        sql = 'select id from CLIENTS WHERE id="{0}"'.format(code)
+        mycursor.execute(sql)
+        myresult = mycursor.fetchall()
+        return myresult
+
+
 
 if __name__== "__main__":
     ComResAjout("example","example")

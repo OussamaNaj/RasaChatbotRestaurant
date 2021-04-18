@@ -35,7 +35,6 @@ stories:
   - action: utter_for_command
   - intent: deny
   - action: reservation_form
-  - action: utter_slots_reservation
 
 - story: path51
   steps:
@@ -44,8 +43,6 @@ stories:
   - intent: affirm
   - intent: order_food
   - action: reservation_command_form
-  - action: utter_slots_reservation
-  - action: utter_slots_command
 
 - story: path511
   steps:
@@ -53,8 +50,6 @@ stories:
   - action: utter_for_command
   - intent: order_food
   - action: reservation_command_form
-  - action: utter_slots_reservation
-  - action: utter_slots_command
 
 - story: path61
   steps:
@@ -63,8 +58,6 @@ stories:
   - intent: affirm
   - intent: reservation
   - action: reservation_command_form
-  - action: utter_slots_reservation
-  - action: utter_slots_command
 
 - story: path611
   steps:
@@ -72,8 +65,7 @@ stories:
   - action: utter_for_reservation
   - intent: reservation
   - action: reservation_command_form
-  - action: utter_slots_reservation
-  - action: utter_slots_command
+
 
 - story: path62
   steps:
@@ -81,7 +73,6 @@ stories:
   - action: utter_for_reservation
   - intent: deny
   - action: command_form
-  - action: utter_slots_command
 
 ######
 - story: path7
@@ -90,9 +81,7 @@ stories:
   - action: utter_code
   - intent: giving_code
   - action: modification_form
-  - action: utter_slots_modification
-  - action: utter_slots_code
-  - action: utter_modify_order
+
 
 - story: path8
   steps:
@@ -100,8 +89,6 @@ stories:
   - action: utter_code
   - intent: giving_code
   - action: cancel_form
-  - action: utter_cancel_order
-
 
 - story: path9
   steps:
