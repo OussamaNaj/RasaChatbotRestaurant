@@ -129,29 +129,61 @@ nlu:
     -it's was [5788](code)
 - intent: order_food
   examples: |
-    - Can we have [the Sunday roast with vegetables and Chicken salad](command) please?
+    - Can we have [roast with vegetables and Chicken salad](command) please?
     - Can i have [2 glasses of white wine](command)
-    - I want a [pizza neptune](command)
+    - I want a [pizza neptune](command) please
     - give me a [small cola and a sandwich](command)
     - Can i have [pizza Marguerite L and cola](command) please
     - I want a [chicken burger with extra cheese](command)
-    - i want [my burger with extra cheese](command) and [2 glasses of white wine](command)
+    - i want [my burger with extra cheese and 2 glasses of white wine](command) please
     - I would like [an iced coffee](command), please.
-    - give me [extra hrissa and without onion](command) please
+    - give me [sandwish hrissa and without onion](command) please
     - I want to have [2 large pizzas with extra cheese](command)
-    - I want [big pizza with some water](command)
+    - I want [big pizza with come water](command)
     - I would like a [dish for two people and one dessert](command)
-    - give me [5 hamburgers with extra cheese and soft drink](command)
-    - I want [two pizza with extra cheese and a water ](command)
+    - give me [5 hamburgers extra cheese and soft drink](command)
+    - I want [two pizza with extra cheese and a water ](command),please
+    - give me [Chicken Soup and salad](command)
+    - I would like [Salad](command)please
+    - give me [Sandwiches ](command)
+    - i want [Ham and cheese](command) please .
+    - i want [Tuna with extra cheese ](command) please
+    - I would like [Tuna and Vegetarian](command)
+    - give us [Vegetarian](command)
+    - I would like [Grilled Cheese](command)
+    - Can i have [Slice of Pizza with extra cheese](command)
+    - I would like [Slice of Pizza and spaghetti](command)please
+    - i want [Cheeseburger and cola](command)
+    - Can i have [Cheeseburger and salad](command)
+    - I would like [Hamburger with extra cheese, Spaghetti and cola](command)please
+    - I would like [Hamburger with extra cheese and Spaghetti ](command)please
+    - i want [Spaghetti and cola](command)
+    - Can we have[Coffee and salad and some water](command)
+    - I would like [Coffee , salad and Tea ](command) please
+    - i want [Tea](command)
+    - i want [Tea and glass of water ](command)
+    -  I'd like [a grilled cheese sandwich](command).
+    -  I'd like [a grilled cheese sandwich and some water](command) please.
+    -  I'd like [a grilled cheese sandwich, some water and dish](command) please.
+    -  I'd like [a grilled cheese sandwich, some water and ... dish](command) please.
+    - I'll have [the fish](command). I'd also like a [salad](command).
+    - Yes, I'd like [a bowl of chicken soup](command), please
+    - Can i have [Coke, Sprite, Root Beer and Ice Tea](command)
+    - Can i have [Coke, Sprite, Root Beer, Ice Tea](command) please
+    - Can i have [Coke an Sprite and Root Beer and Ice Tea](command) please
+    - I'd like a [glass of Coke](command), please.
     - [pizza](command)
     - and a [big pizza](command)
-    - [sandwich](command)
+    - Can i have [sandwich](command) please.
+    - Can i have [sandwich and small cola](command),please.
+    - Can i have [sandwich , small cola and water](command).
     - I would like to have[pizza](command)
-    - give me [cola](command)
-    - [soft drink](command)
-    - a [pizza chicken, fries and a coca ](command)
+    - give me [cola](command),please.
+    - Can i have [soft drink](command) please
+    - a [pizza chicken, fries and a coca ](command) please
     - order [food](command)
     - i want [double cheese berger without onion and mustard](command)
+    - i want [double cheese berger without onion and mustard, salad and soft drink ](command)please
     - i want to order a [pine apple pizza without the pineapples](command)
     - [Without onion](command)
     - I'd like to get [........](command)

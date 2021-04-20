@@ -35,6 +35,8 @@ intents:
     use_entities: true
 - deny:
     use_entities: true
+- nlu_fallback:
+    use_entities: true
 entities:
 - command
 - reservation
@@ -61,6 +63,11 @@ slots:
     initial_value: null
     auto_fill: true
     influence_conversation: true
+  requested_slot:
+    type: rasa.shared.core.slots.UnfeaturizedSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: false
 responses:
   utter_greet:
   - text: Hey! How are you?
@@ -73,20 +80,22 @@ responses:
   utter_for_reservation:
   - text: Do you want to reserve ??
   utter_for_command:
-    - text: what do you want to command ??
+  - text: what do you want to command ??
+  utter_modification:
+  - text: modification Done !
   utter_restau_info:
   - text: |2-
-       About US 
-       CUISINES: 
-       Française, Méditerranéenne, Européenne 
-       REPAS: 
-       Déjeuner, Dîner 
+       About US
+       CUISINES:
+       Française, Méditerranéenne, Européenne
+       REPAS:
+       Déjeuner, Dîner
        FONCTIONNALITÉS:
-       Réservations, Terrasse, Salle privée, Places assises, Accès personnes handicapées, Sert de l'alcool, Bar complet, Accepte les cartes bancaires, Service de table 
-       Emplacement et coordonnées: 
-       3 Rue Imam Sahnoun 3 rue Imam sahnoun, Tunis 1002 Tunisie 
-       2,8 km de Médina de Tunis 
-       https://www.tripadvisor.fr/Restaurant_Review-g293758-d3562589-Reviews-La_Salle_a_Manger-Tunis_Tunis_Governorate.html#MAPVIEW 
+       Réservations, Terrasse, Salle privée, Places assises, Accès personnes handicapées, Sert de l'alcool, Bar complet, Accepte les cartes bancaires, Service de table
+       Emplacement et coordonnées:
+       3 Rue Imam Sahnoun 3 rue Imam sahnoun, Tunis 1002 Tunisie
+       2,8 km de Médina de Tunis
+       https://www.tripadvisor.fr/Restaurant_Review-g293758-d3562589-Reviews-La_Salle_a_Manger-Tunis_Tunis_Governorate.html#MAPVIEW
        +216 71 793 283
   utter_delivery:
   - text: sorry, we haven't delivery service
@@ -95,26 +104,25 @@ responses:
     text: this is the menu
   utter_timing:
   - text: |-
-      Horaires 
-       lun 
-       12:00 L'après-midi - 3:30 L'après-midi 
-       6:00 L'après-midi - 12:00 Le matin 
-       mar 
-       12:00 L'après-midi - 3:30 L'après-midi 
-       6:00 L'après-midi - 12:00 Le matin 
-       mer 
-       12:00 L'après-midi - 3:30 L'après-midi 
-       6:00 L'après-midi - 12:00 Le matin 
-       jeu 
-       12:00 L'après-midi - 3:30 L'après-midi 
-       6:00 L'après-midi - 12:00 Le matin 
-       ven 
-       12:00 L'après-midi - 3:30 L'après-midi 
-       6:00 L'après-midi - 12:00 Le matin 
-       sam 
-       12:00 L'après-midi - 3:30 L'après-midi 
-       6:00 L'après-midi - 12:00 Le matin 
-       
+      Horaires
+       lun
+       12:00 L'après-midi - 3:30 L'après-midi
+       6:00 L'après-midi - 12:00 Le matin
+       mar
+       12:00 L'après-midi - 3:30 L'après-midi
+       6:00 L'après-midi - 12:00 Le matin
+       mer
+       12:00 L'après-midi - 3:30 L'après-midi
+       6:00 L'après-midi - 12:00 Le matin
+       jeu
+       12:00 L'après-midi - 3:30 L'après-midi
+       6:00 L'après-midi - 12:00 Le matin
+       ven
+       12:00 L'après-midi - 3:30 L'après-midi
+       6:00 L'après-midi - 12:00 Le matin
+       sam
+       12:00 L'après-midi - 3:30 L'après-midi
+       6:00 L'après-midi - 12:00 Le matin
   utter_reservation:
   - text: Done !
   utter_command:
@@ -133,14 +141,10 @@ responses:
   - text: OK!
   utter_code:
   - text: Give me your Code, please !
-  utter_slots_reservation:
-  - text: your reservation:{reservation}
-  utter_slots_command:
-  - text: your command:{command}
-  utter_slots_code:
-  - text: your code:{code}
-  utter_slots_modification:
-  - text: your modification :{modification}
+  utter_slots_bill:
+  - text: code:{code}
+  utter_slots_cancel:
+  - text: the command of code {code}  is deleted
 actions:
 - reservation_form
 - command_form
@@ -148,11 +152,18 @@ actions:
 - modification_form
 - reservation_command_form
 - bill_form
+- aux_modification
+- aux_reservation_command
+- aux_command_reservation
+- web_scraping
 forms:
   reservation_form: {}
   command_form: {}
   cancel_form: {}
   modification_form: {}
   bill_form: {}
-
+  web_scraping: {}
+  aux_modification: {}
+  aux_reservation_command: {}
+  aux_command_reservation: {}
 e2e_actions: []

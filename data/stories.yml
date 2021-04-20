@@ -1,94 +1,90 @@
 version: "2.0"
-
 stories:
 - story: path0
   steps:
   - intent: greet
   - action: utter_greet
   - action: utter_for_help
-
 - story: path1
   steps:
   - action: utter_for_help
   - intent: restau_info
   - action: utter_restau_info
-
 - story: path2
   steps:
   - intent: delivery
   - action: utter_delivery
-
 - story: path3
   steps:
   - intent: menu
   - action: utter_menu
-
 - story: path4
   steps:
   - intent: timing
   - action: utter_timing
-
-#######
 - story: path5
   steps:
   - intent: reservation
+  - action: aux_reservation_command
   - action: utter_for_command
   - intent: deny
   - action: reservation_form
-
 - story: path51
   steps:
   - intent: reservation
+  - action: aux_reservation_command
   - action: utter_for_command
   - intent: affirm
   - intent: order_food
+  - action: aux_command_reservation
   - action: reservation_command_form
-
 - story: path511
   steps:
   - intent: reservation
+  - action: aux_reservation_command
   - action: utter_for_command
   - intent: order_food
+  - action: aux_command_reservation
   - action: reservation_command_form
-
 - story: path61
   steps:
   - intent: order_food
+  - action: aux_command_reservation
   - action: utter_for_reservation
   - intent: affirm
   - intent: reservation
+  - action: aux_reservation_command
   - action: reservation_command_form
-
 - story: path611
   steps:
   - intent: order_food
+  - action: aux_command_reservation
   - action: utter_for_reservation
   - intent: reservation
+  - action: aux_reservation_command
   - action: reservation_command_form
-
-
 - story: path62
   steps:
   - intent: order_food
+  - action: aux_command_reservation
   - action: utter_for_reservation
   - intent: deny
   - action: command_form
-
-######
 - story: path7
   steps:
   - intent: modify_order
+  - action: aux_modification
   - action: utter_code
   - intent: giving_code
   - action: modification_form
-
-
+  - action: utter_modification
 - story: path8
   steps:
   - intent: cancel_order
   - action: utter_code
   - intent: giving_code
   - action: cancel_form
+  - action: utter_slots_cancel
 
 - story: path9
   steps:
@@ -96,7 +92,7 @@ stories:
   - action: utter_code
   - intent: giving_code
   - action: bill_form
-
+  - action: utter_slots_bill
 - story: path10
   steps:
   - intent: goodbye
