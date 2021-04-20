@@ -1925,3 +1925,5 @@ JavaScript error: , line 0: InvalidStateError: An attempt was made to use an obj
 ** (firefox:225486): CRITICAL **: 00:12:48.183: impl_GetURI: assertion 'ATK_IS_HYPERLINK (link)' failed
 
 ** (firefox:225486): CRITICAL **: 00:26:53.849: impl_GetURI: assertion 'ATK_IS_HYPERLINK (link)' failed
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
