@@ -1943,3 +1943,11 @@ console.log: WebExtensions: reset-default-search: No addons in our list are inst
 (firefox:239288): Atk-CRITICAL **: 01:11:00.927: atk_text_get_range_extents: assertion 'start_offset >= 0 && start_offset < end_offset' failed
 
 (firefox:239288): Atk-CRITICAL **: 01:11:01.221: atk_text_get_range_extents: assertion 'start_offset >= 0 && start_offset < end_offset' failed
+JavaScript error: , line 0: NetworkError: A network error occurred.
+JavaScript error: , line 0: NetworkError: A network error occurred.
+JavaScript error: , line 0: NetworkError: A network error occurred.
+1618964362577	Marionette	INFO	Stopped listening on port 44505
+
+###!!! [Parent][RunMessage] Error: Channel closing: too late to send/recv, messages will be lost
+
+1618964437816	Marionette	INFO	Stopped listening on port 34959
