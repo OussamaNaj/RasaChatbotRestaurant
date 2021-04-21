@@ -1927,3 +1927,19 @@ JavaScript error: , line 0: InvalidStateError: An attempt was made to use an obj
 ** (firefox:225486): CRITICAL **: 00:26:53.849: impl_GetURI: assertion 'ATK_IS_HYPERLINK (link)' failed
 console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
 console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+Exiting due to channel error.
+Exiting due to channel error.
+Exiting due to channel error.
+1618963162710	geckodriver	INFO	Listening on 127.0.0.1:35631
+1618963163874	mozrunner::runner	INFO	Running command: "/usr/bin/firefox" "--marionette" "-foreground" "-no-remote" "-profile" "/tmp/rust_mozprofile3EDIRQ"
+console.warn: SearchSettings: "get: No settings file exists, new profile?" (new Error("", "(unknown module)"))
+console.error: Region.jsm: "Error fetching region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 772))
+console.error: Region.jsm: "Failed to fetch region" (new Error("TIMEOUT", "resource://gre/modules/Region.jsm", 419))
+1618963216055	Marionette	INFO	Listening on port 44505
+1618963216371	Marionette	WARN	TLS certificate errors will be ignored for this session
+JavaScript error: , line 0: NetworkError: A network error occurred.
+console.log: WebExtensions: reset-default-search: No addons in our list are installed.
+
+(firefox:239288): Atk-CRITICAL **: 01:11:00.927: atk_text_get_range_extents: assertion 'start_offset >= 0 && start_offset < end_offset' failed
+
+(firefox:239288): Atk-CRITICAL **: 01:11:01.221: atk_text_get_range_extents: assertion 'start_offset >= 0 && start_offset < end_offset' failed
