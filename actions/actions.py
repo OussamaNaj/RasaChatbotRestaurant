@@ -20,6 +20,10 @@ class ActionHelloWorld1(FormAction):
     def submit(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
+        ll=["Can i","we want","i have","give me","i want","i can","i would","i would like","I'd like","get","have","had","need","reserve","book","sit","choose","i wanna"]
+        for j in ll:
+            if (j.upper() in self.reservation.upper()):
+                self.reservation=self.reservation.upper().replace(j.upper(),"")
         id = ComResAjout("nothing", self.reservation)
         dispatcher.utter_message(text="Done !")
         dispatcher.utter_message(text="your Code is: "+str(id))
@@ -37,6 +41,10 @@ class ActionHelloWorld2(FormAction):
     def submit(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
+        l=["Can i","i have","give me","i want","i can","i would","i would like","I'd like","get","have","had","i wanna"]
+        for i in l:
+            if (i.upper() in self.command.upper()):
+                self.command=self.command.upper().replace(i.upper(),"")
         id = ComResAjout(self.command,"nothing")
         dispatcher.utter_message(text="Done !")
         dispatcher.utter_message(text="Your Code is: "+ str(id))
@@ -55,6 +63,14 @@ class ActionHelloWorld3(FormAction):
     def submit(self, dispatcher: CollectingDispatcher,
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
+        l=["i Can","we want","i have","give me","i want","can i","i can","i would","i would like","I'd like","get","i have","had","i wanna"]
+        for i in l:
+            if (i.upper() in self.command.upper()):
+                self.command=self.command.upper().replace(i.upper(),"")
+        ll=["i Can","can i","i have","give me","i want","can i","i would","i would like","I'd like","get","have","had","i need","reserve","book","sit","choose","i wanna"]
+        for j in ll:
+            if (j.upper() in self.reservation.upper()):
+                self.reservation=self.reservation.upper().replace(j.upper(),"")
         id = ComResAjout(self.command,self.reservation)
         dispatcher.utter_message(text="Done !")
         dispatcher.utter_message(text="Your Code is :"+str(id))
@@ -91,6 +107,10 @@ class ActionHelloWorld5(FormAction):
             tracker: Tracker,
             domain: Dict[Text, Any]) -> List[Dict]:
         var=tracker.get_slot("modification")
+        l=["i Can","i Can","we want to","i have to","i want to","can i","i would to","i would like to","I'd like to","i have to","had","i wanna to"]
+        for i in l:
+            if (i.upper() in self.modification.upper()):
+                self.modification=self.modification.upper().replace(i.upper(),"")
         myresult=verif(tracker.get_slot("code"))
         if myresult == []:
             dispatcher.utter_message(text="The code is wrong, try again please !!")
